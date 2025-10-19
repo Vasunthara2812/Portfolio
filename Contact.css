@@ -1,0 +1,187 @@
+/* Container */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+  position: relative; /* Needed for absolute positioning of theme pattern */
+}
+
+/* Contact Heading with Theme Pattern */
+.contact {
+  position: relative; /* Relative for absolute theme pattern */
+  padding: 0 30px;
+}
+
+.contact h1 {
+  font-size: 80px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.contact img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;       /* Behind the heading */
+  width: 200px;      /* Adjust size as needed */
+  height: auto;
+}
+
+/* Section */
+.contact-section {
+  display: flex;
+  gap: 150px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Left Section */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 80px;
+  font-weight: 700;
+  background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.contact-left p {
+  font-size: 22px;
+  font-weight: 400;
+  color: #d8d8d8;
+}
+
+/* Contact Details */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 22px;
+  color: #d8d8d8;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-detail img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Right Section (Form) */
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
+
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+  outline: none;
+  border-color: #B415FF;
+  box-shadow: 0 0 5px rgba(180, 21, 255, 0.5);
+}
+
+.contact-right label {
+  font-weight: 500;
+}
+
+/* Submit Button */
+.contact-submit {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #B415FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-submit:hover {
+  background-color: #DF8908;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-container {
+    margin: 50px 30px;
+    gap: 50px;
+  }
+
+  .contact h1 {
+    font-size: 50px;
+  }
+
+  .contact-left {
+    font-size: 50px;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .contact img {
+    width: 100px;
+  }
+}
+/* Form Labels */
+/* Form Labels */
+.contact-right label {
+  font-weight: 500;          /* Medium-bold text */
+  font-size: 18px;
+  color: #d8d8d8;
+  margin-bottom: 5px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+/* Change label color when the input/textarea is focused */
+.contact-right input:focus,
+.contact-right textarea:focus {
+  outline: none; /* Optional: remove default outline */
+  border-color: #B415FF;
+  box-shadow: 0 0 5px rgba(180, 21, 255, 0.5);
+}
+
+/* Parent wrapper changes label color on focus */
+.contact-right input:focus ~ label,
+.contact-right textarea:focus ~ label {
+  color: #B415FF;
+}
+
+/* Better approach using :focus-within */
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-right div.input-group:focus-within label {
+  color: #B415FF;
+}
+
+
