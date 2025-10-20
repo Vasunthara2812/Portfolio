@@ -1,0 +1,98 @@
+.footer{
+    margin: 50px 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-top-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  color: #fff;
+  font-family: "Poppins", sans-serif; /* Matches your portfolio font */
+}
+
+
+
+/* Name styling */
+/* Ensure the container and paragraph exist in HTML:
+   <div class="footer-top-left">
+     <p>Vasunthara</p>
+     <p>I'm a pursuing MCA student ...</p>
+   </div>
+*/
+
+.footer-top-left p:first-of-type {
+  display: inline-block; /* important for background-clip to work reliably */
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;      /* Safari/Chrome */
+  -webkit-text-fill-color: transparent; /* Safari/Chrome */
+  color: transparent;                 /* fallback */
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+
+
+/* Description text */
+.footer-top-left p:last-of-type {
+  font-size: 16px;
+  font-weight: 400;
+  color: #d8d8d8;
+  line-height: 1.6;
+  max-width: 320px;
+  margin: 0;
+}
+
+.footer-top-right{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+}
+.footer-email-input{
+    display: flex;
+    gap: 30px;
+    padding: 20px 30px;
+    border-radius: 50px;
+    background: #323238;
+    padding-right: 80px;
+
+}
+.footer-email-input input{
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #a0a0a0;
+    font-family: Outfit;
+    font-size: 18px;
+
+}
+.footer-subscribe{
+    font-size: 20px;
+    padding: 22px 50px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #DF8908  -5.09%, #B415FF);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.footer-bottom-right{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+}
